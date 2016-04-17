@@ -1,6 +1,6 @@
 # AFrame GIF Shader
 
-A shader to display GIF for [A-Frame](https://aframe.io) VR. Migrated from [aframe-gif-component](https://github.com/mayognaise/aframe-gif-component)
+A shader to display GIF for [A-Frame](https://aframe.io) VR. Inspired by [@gtk2k](https://github.com/gtk2k)'s [awesome sample](https://github.com/gtk2k/gtk2k.github.io/tree/master/animation_gif). Migrated from [aframe-gif-component](https://github.com/mayognaise/aframe-gif-component)
 
 
 **[DEMO](https://mayognaise.github.io/aframe-gif-shader/basic/index.html)**
