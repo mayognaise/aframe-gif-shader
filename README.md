@@ -12,7 +12,8 @@ A shader to display GIF for [A-Frame](https://aframe.io) VR. Migrated from [afra
 
 - Basic material's properties are supported.
 - The property is pretty much same as `flat` shader besides `repeat`. Will update it soon.
-- `autoplay` will be useful when method is ready.
+- `autoplay` will be useful when [Method](#method) is ready.
+- `filter` property will be supported soon.
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
