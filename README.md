@@ -17,11 +17,12 @@ A shader to display GIF for [A-Frame](https://aframe.io) VR. Migrated from [afra
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-|src|image url|null|
+|src|image url. @see [Textures](https://aframe.io/docs/components/material.html#Textures)|null|
 |autoplay|play automatecally once it's ready|true|
 
 For refference, please check the following links:
 - [Material](https://aframe.io/docs/components/material.html)
+- [Textures](https://aframe.io/docs/components/material.html#Textures)
 - [Flat Shading Model](https://aframe.io/docs/core/shaders.html#Flat-Shading-Model)
 
 
