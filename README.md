@@ -16,8 +16,8 @@ A shader to display GIF for [A-Frame](https://aframe.io) VR. Migrated from [afra
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-|`src`|image url|null|
-|`autoplay`|play automatecally once it's ready|true|
+|src|image url|null|
+|autoplay|play automatecally once it's ready|true|
 
 For refference, please check the following links:
 - [Material](https://aframe.io/docs/components/material.html)
