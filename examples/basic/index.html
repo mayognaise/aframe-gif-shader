@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>A-Frame GIF Shader - Basic</title>
+    <script src="../build.js"></script>
+    <link rel="stylesheet" type="text/css" href="../common.css"/>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- assets -->
+      <a-assets>
+        <img id="nyancat" src="nyancat.gif">
+        <img id="pusheen" src="pusheen.gif">
+      </a-assets>
+
+      <!-- pusheen -->
+      <a-entity class="gif" geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4 -1" material="shader:gif;src:url(pusheen.gif);">
+        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+      </a-entity>
+      <a-entity class="gif" geometry="primitive:plane;width:2;height:2;" position="-1.2 1.75 -1" material="shader:gif;src:url(pusheen.gif);color:orange;"></a-entity>
+      <a-entity class="gif" geometry="primitive:circle;segments:64" position="-1.2 -0.5 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue"></a-entity>
+
+      <!-- nyancat -->
+      <a-entity class="gif" geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;"></a-entity>
+      <a-entity rotation="0 0 0" position="1.2 1.75 -1">
+        <a-entity class="gif" geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;">
+          <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        </a-entity>
+      </a-entity>
+      <a-entity class="gif" geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 -0.5 -1" material="shader:gif;src:url(nyancat.gif);color:green"></a-entity>
+
+      <!-- sky -->
+      <a-sky color="pink"></a-sky>
+
+    </a-scene>
+
+    <div id="buttons" class="buttons"></div>
+    
+    <div class="spacer"></div>
+    <div class="spacer2"></div>
+    <script>
+    /**
+      TODO:
+      - create button
+      - adding click event to toggle playback
+    var buttons = document.getElementById("buttons")
+    Array.prototype.slice.call(document.querySelectorAll(".gif")).map(function(el) {
+      // el.shader.togglePlayback()
+    })
+     */
+    </script>
+  </body>
+</html>
+
