@@ -5,6 +5,7 @@
   "main": "dist/aframe-gif-shader.js",
   "scripts": {
     "build": "webpack -p examples/main.js examples/build.js",
+    "webpack-dev": "webpack index.js dist/aframe-gif-shader.js --watch",
     "dev": "budo examples/main.js:build.js --dir examples --port 8000 --live -- -t babelify",
     "dist": "webpack index.js dist/aframe-gif-shader.js && webpack -p index.js dist/aframe-gif-shader.min.js",
     "postpublish": "npm run dist",

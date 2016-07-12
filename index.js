@@ -59,7 +59,7 @@ AFRAME.registerShader('gif', {
     this.__reset()
     this.material = new THREE.MeshBasicMaterial({ map: this.__texture })
     this.el.sceneEl.addBehavior(this)
-    // this.__addPublicFunctions() /* [TODO] ask how to get shader from `a-entity` element */
+    this.__addPublicFunctions()
     return this.material
   },
 
@@ -79,8 +79,7 @@ AFRAME.registerShader('gif', {
    * @protected
    */
   tick (t) {
-    // log('tick', this.__paused)
-    if (!this.__frames || this.__paused) return
+    if (!this.__frames || this.paused()) return
     if (Date.now() - this.__startTime >= this.__nextFrameTime) {
       this.nextFrame()
     }
@@ -343,7 +342,7 @@ AFRAME.registerShader('gif', {
    * @private
    */
   __addPublicFunctions () {
-    this.el.shader = {
+    this.el.gif = {
       play: this.play.bind(this),
       pause: this.pause.bind(this),
       togglePlayback: this.togglePlayback.bind(this),
