@@ -1,6 +1,6 @@
 {
   "name": "aframe-gif-shader",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A shader to display GIF for A-Frame VR.",
   "main": "dist/aframe-gif-shader.js",
   "scripts": {
