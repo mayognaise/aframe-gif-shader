@@ -28,13 +28,47 @@ For refference, please check the following links:
 
 ## Method
 
-The following method is coming soon.
+#### `play()`
 
-- play()
-- pause()
-- togglePlayback()
-- nextFrame()
-- paused()
+Play gif animation
+
+```js
+entity.gif.play()
+```
+
+#### `pause()`
+
+Pause gif animation
+
+```js
+entity.gif.pause()
+```
+
+#### `togglePlayback()`
+
+Toggle playback. if the gif is paused, play and pause if it's playing.
+
+```js
+entity.gif.togglePlayback()
+```
+
+#### `nextFrame()`
+
+Go to next frame. Useful if it's paused.
+
+```js
+entity.gif.nextFrame()
+```
+
+
+#### `paused()`
+
+Returns if it is paused.
+
+```js
+const paused = entity.gif.paused() // true or false
+```
+
 
 
 ## Events
