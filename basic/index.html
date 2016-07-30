@@ -15,22 +15,26 @@
         <img id="pusheen" src="pusheen.gif">
       </a-assets>
 
-      <!-- pusheen -->
-      <a-entity class="gif" geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4 -1" material="shader:gif;src:url(pusheen.gif);" data-label="left top">
-        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-      </a-entity>
-      <a-entity class="gif" geometry="primitive:plane;width:2;height:2;" position="-1.2 1.75 -1" material="shader:gif;src:url(pusheen.gif);color:orange;" data-label="left middle"></a-entity>
-      <a-entity class="gif" geometry="primitive:circle;segments:64" position="-1.2 -0.5 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue" data-label="left bottom"></a-entity>
+      <a-entity position="0 0 -5">
 
-      <!-- nyancat -->
-      <a-entity class="gif" geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;" data-label="right top"></a-entity>
-      <a-entity rotation="0 0 0" position="1.2 1.75 -1">
-        <a-entity class="gif" geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" data-label="right middle">
-          <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        <!-- pusheen -->
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4 -1" material="shader:gif;src:url(pusheen.gif);" data-label="left top">
+          <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
         </a-entity>
-      </a-entity>
-      <a-entity class="gif" geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 -0.5 -1" material="shader:gif;src:url(nyancat.gif);color:green" data-label="right bottom"></a-entity>
+        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 1.75 -1" material="shader:gif;src:url(pusheen.gif);color:orange;" data-label="left middle"></a-entity>
+        <a-entity geometry="primitive:circle;segments:64" position="-1.2 -0.5 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue" data-label="left bottom"></a-entity>
 
+        <!-- nyancat -->
+        <a-entity geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;" data-label="right top"></a-entity>
+        <a-entity rotation="0 0 0" position="1.2 1.75 -1">
+          <a-entity geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" data-label="right middle">
+            <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+          </a-entity>
+        </a-entity>
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 -0.5 -1" material="shader:gif;src:url(nyancat.gif);color:green" data-label="right bottom"></a-entity>
+
+        </a-entity>
+      
       <!-- sky -->
       <a-sky color="pink"></a-sky>
 
@@ -40,23 +44,6 @@
     
     <div class="spacer"></div>
     <div class="spacer2"></div>
-    <script>
-    /**
-      TODO:
-      - create button
-      - adding click event to toggle playback
-     */
-    var buttons = document.getElementById("buttons")
-    Array.prototype.slice.call(document.querySelectorAll(".gif")).map(function(el) {
-      var button = document.createElement("a")
-      button.addEventListener('click', function(e) {
-        el.gif.togglePlayback()
-      })
-      button.innerHTML = "toggle playback (" + el.getAttribute("data-label") + ")";
-      buttons.appendChild(button)
-    })
-    
-    </script>
   </body>
 </html>
 
