@@ -1,7 +1,8 @@
 # AFrame GIF Shader
 
-A shader to display GIF for [A-Frame](https://aframe.io) VR. Inspired by [@gtk2k](https://github.com/gtk2k)'s [awesome sample](https://github.com/gtk2k/gtk2k.github.io/tree/master/animation_gif). Migrated from [aframe-gif-component](https://github.com/mayognaise/aframe-gif-component)
+**A gif shader for [A-Frame](https://aframe.io) VR. Inspired by [@gtk2k](https://github.com/gtk2k)'s [awesome sample](https://github.com/gtk2k/gtk2k.github.io/tree/master/animation_gif).**
 
+**To control, please use [`aframe-gif-component`](https://github.com/mayognaise/aframe-gif-component).**
 
 **[DEMO](https://mayognaise.github.io/aframe-gif-shader/basic/index.html)**
 
@@ -11,9 +12,7 @@ A shader to display GIF for [A-Frame](https://aframe.io) VR. Inspired by [@gtk2k
 ## Properties
 
 - Basic material's properties are supported.
-- The property is pretty much same as `flat` shader besides `repeat`. Will update it soon.
-- `autoplay` will be useful when [Method](#method) is ready.
-- `filter` property will be supported soon.
+- The property is pretty much same as `flat` shader besides `repeat`.
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
@@ -21,59 +20,9 @@ A shader to display GIF for [A-Frame](https://aframe.io) VR. Inspired by [@gtk2k
 |autoplay|play automatecally once it's ready|true|
 
 For refference, please check the following links:
-- [Material](https://aframe.io/docs/components/material.html)
-- [Textures](https://aframe.io/docs/components/material.html#Textures)
+- [Material](https://aframe.io/docs/master/components/material.html)
+- [Textures](https://aframe.io/docs/master/components/material.html#textures)
 - [Flat Shading Model](https://aframe.io/docs/core/shaders.html#Flat-Shading-Model)
-
-
-## Method
-
-#### `play()`
-
-Play gif animation
-
-```js
-entity.gif.play()
-```
-
-#### `pause()`
-
-Pause gif animation
-
-```js
-entity.gif.pause()
-```
-
-#### `togglePlayback()`
-
-Toggle playback. if the gif is paused, play and pause if it's playing.
-
-```js
-entity.gif.togglePlayback()
-```
-
-#### `nextFrame()`
-
-Go to next frame. Useful if it's paused.
-
-```js
-entity.gif.nextFrame()
-```
-
-
-#### `paused()`
-
-Returns if it is paused.
-
-```js
-const paused = entity.gif.paused() // true or false
-```
-
-
-
-## Events
-
-[Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events) will be supported soon.
 
 
 ## Usage
