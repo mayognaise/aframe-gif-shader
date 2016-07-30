@@ -59,7 +59,6 @@ AFRAME.registerShader('gif', {
     this.__reset()
     this.material = new THREE.MeshBasicMaterial({ map: this.__texture })
     this.el.sceneEl.addBehavior(this)
-    this.__addPublicFunctions()
     return this.material
   },
 
@@ -336,20 +335,6 @@ AFRAME.registerShader('gif', {
   /*================================
   =            playback            =
   ================================*/
-
-  /**
-   * add public functions
-   * @private
-   */
-  __addPublicFunctions () {
-    this.el.gif = {
-      play: this.play.bind(this),
-      pause: this.pause.bind(this),
-      togglePlayback: this.togglePlayback.bind(this),
-      paused: this.paused.bind(this),
-      nextFrame: this.nextFrame.bind(this),
-    }
-  },
 
   /**
    * Pause gif
