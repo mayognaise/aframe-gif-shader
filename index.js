@@ -413,8 +413,10 @@ AFRAME.registerShader('gif', {
    * @private
    */
   __draw () {
-    this.__ctx.drawImage(this.__frames[this.__frameIdx], 0, 0, this.__width, this.__height)
-    this.__texture.needsUpdate = true
+    if(typeof this.__frames[this.__frameIdx] !== 'undefined') {
+      this.__ctx.drawImage(this.__frames[this.__frameIdx], 0, 0, this.__width, this.__height)
+      this.__texture.needsUpdate = true
+    }
   },
 
   /*============================
