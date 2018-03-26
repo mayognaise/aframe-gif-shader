@@ -55,6 +55,11 @@ AFRAME.registerShader('gif', {
     this.__cnv.height = 2
     this.__ctx = this.__cnv.getContext('2d')
     this.__texture = new THREE.Texture(this.__cnv) //renders straight from a canvas
+    if (data.repeat) {
+      this.__texture.wrapS = THREE.RepeatWrapping;
+      this.__texture.wrapT = THREE.RepeatWrapping;
+      this.__texture.repeat.set( data.repeat.x, data.repeat.y );	
+    }
     this.__material = {}
     this.__reset()
     this.material = new THREE.MeshBasicMaterial({ map: this.__texture })
