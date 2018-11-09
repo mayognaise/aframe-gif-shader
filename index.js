@@ -415,6 +415,9 @@ AFRAME.registerShader('gif', {
   __draw () {
     if(this.__frameIdx != 0){
       var lastFrame = this.__frames[this.__frameIdx -1 ]
+      // Disposal method indicates if you should clear or not the background.
+      // This flag is represented in binary and is a packed field which can also represent transparency.
+      // http://matthewflickinger.com/lab/whatsinagif/animation_and_transparency.asp  
       if(lastFrame.disposalMethod == 8 || lastFrame.disposalMethod == 9){
         this.__clearCanvas();
       }
