@@ -542,8 +542,8 @@
 	    this.__frames = frames;
 	    this.__frameCnt = times.length;
 	    this.__startTime = Date.now();
-	    this.__width = THREE.Math.nearestPowerOfTwo(frames[0].width);
-	    this.__height = THREE.Math.nearestPowerOfTwo(frames[0].height);
+	    this.__width = THREE.Math.floorPowerOfTwo(frames[0].width);
+	    this.__height = THREE.Math.floorPowerOfTwo(frames[0].height);
 	    this.__cnv.width = this.__width;
 	    this.__cnv.height = this.__height;
 	    this.__draw();
