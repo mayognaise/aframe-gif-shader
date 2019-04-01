@@ -30,7 +30,6 @@ AFRAME.registerShader('gif', {
    * For MeshBasicMaterial
    * @see http://threejs.org/docs/#Reference/Materials/MeshBasicMaterial
    */
-  
   schema: {
 
     /* For material */
@@ -87,7 +86,7 @@ AFRAME.registerShader('gif', {
   /*================================
   =            material            =
   ================================*/
-  
+
   /**
    * Updating existing material.
    * @param {object} data - Material component data.
@@ -129,7 +128,7 @@ AFRAME.registerShader('gif', {
    * @property {array} frames - array of each image
    * @property {Date} timestamp - created at the texure
    */
-  
+
   __setTexure (data) {
     log('__setTexure', data)
     if (data.status === 'error') {
@@ -176,7 +175,7 @@ AFRAME.registerShader('gif', {
 
     /* check if src is a url */
     const url = parseUrl(src)
-    if (url) {      
+    if (url) {
       this.__getImageSrc(url, cb)
       return
     }
@@ -230,7 +229,7 @@ AFRAME.registerShader('gif', {
 
     /* if src is same as previous, ignore this */
     if (src === this.__textureSrc) { return }
-    
+
     /* check if we already get the srcData */
     let srcData = gifData[src]
     if (!srcData || !srcData.callbacks) {
@@ -250,7 +249,7 @@ AFRAME.registerShader('gif', {
     const tester = new Image()
     tester.crossOrigin = 'Anonymous'
     tester.addEventListener('load', e => {
-      /* check if it is gif */      
+      /* check if it is gif */
       this.__getUnit8Array(src, arr => {
         if (!arr) {
           onError('This is not gif. Please use `shader:flat` instead')
@@ -290,7 +289,7 @@ AFRAME.registerShader('gif', {
    */
   __getUnit8Array(src, cb) {
     if (typeof cb !== 'function') { return }
-    
+
     const xhr = new XMLHttpRequest()
     xhr.open('GET', src)
     xhr.responseType = 'arraybuffer'
@@ -311,7 +310,7 @@ AFRAME.registerShader('gif', {
     })
     xhr.send()
   },
-  
+
 
   /**
    * Query and validate a query selector,
@@ -330,7 +329,7 @@ AFRAME.registerShader('gif', {
       return { error: 'no valid selector' }
     }
   },
-  
+
 
   /*================================
   =            playback            =
@@ -358,19 +357,19 @@ AFRAME.registerShader('gif', {
    * Toggle playback. play if paused and pause if played.
    * @public
    */
-  
+
   togglePlayback () {
 
     if (this.paused()) { this.play() }
     else { this.pause() }
 
   },
-  
+
   /**
    * Return if the playback is paused.
    * @public
    * @return {boolean}
-   */  
+   */
   paused () {
     return this.__paused
   },
@@ -393,7 +392,7 @@ AFRAME.registerShader('gif', {
       }
     }
 
-  }, 
+  },
 
   /*==============================
    =            canvas            =
@@ -420,7 +419,7 @@ AFRAME.registerShader('gif', {
   /*============================
   =            ready            =
   ============================*/
-  
+
   /**
    * setup gif animation and play if autoplay is true
    * @private
@@ -428,7 +427,7 @@ AFRAME.registerShader('gif', {
    * @param {array} times - array of time length of each image
    * @param {number} cnt - total counts of gif images
    * @param {array} frames - array of each image
-   */  
+   */
   __ready ({ src, times, cnt, frames }) {
     log('__ready')
     this.__textureSrc = src
@@ -449,17 +448,13 @@ AFRAME.registerShader('gif', {
       this.pause()
     }
   },
-  
-  
 
   /*=============================
   =            reset            =
   =============================*/
-  
   /**
    * @private
    */
-  
   __reset () {
     this.pause()
     this.__clearCanvas()
@@ -473,8 +468,4 @@ AFRAME.registerShader('gif', {
     this.__frames = null
     this.__textureSrc = null
   },
-
-
-
 })
-

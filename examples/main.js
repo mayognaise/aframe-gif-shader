@@ -1,2 +1,1 @@
-import 'aframe'
-import '../'
+import '../index.js';
