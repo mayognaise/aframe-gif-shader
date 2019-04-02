@@ -19,32 +19,22 @@
       <a-entity position="0 0 -5">
 
         <!-- pusheen -->
-        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4 -1" material="shader:gif;src:url(pusheen.gif);" data-label="left top">
-          <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-        </a-entity>
-        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 1.75 -1" material="shader:gif;src:url(pusheen.gif);color:orange;" data-label="left middle"></a-entity>
-        <a-entity geometry="primitive:circle;segments:64" position="-1.2 -0.5 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue" data-label="left bottom"></a-entity>
-
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4.625 -1" material="shader:gif;src:url(pusheen.gif);" animation="property: rotation; dur: 10000; fill: forwards; to: 0 360 0; loop: true; easing: linear;" data-label="left top"></a-entity>
+        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 2.375 -1" material="shader:gif;src:url(pusheen.gif);color:orange;" data-label="left middle"></a-entity>
+        <a-entity geometry="primitive:circle;segments:64" position="-1.2 0.125 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue" data-label="left bottom"></a-entity>
+        <a-entity geometry="primitive:circle;segments:6" position="-1.2 -2.125 -1" material="shader:gif;src:#pusheen;repeat: 2 2;" data-label="left bottom"></a-entity>
         <!-- nyancat -->
-        <a-entity geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;" data-label="right top"></a-entity>
-        <a-entity rotation="0 0 0" position="1.2 1.75 -1">
-          <a-entity geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" data-label="right middle">
-            <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-          </a-entity>
+        <a-entity geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4.625 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;" data-label="right top"></a-entity>
+        <a-entity rotation="0 0 0" position="1.2 2.25 -1">
+          <a-entity geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" animation="property:rotation; dur:5000; fill:forwards; to:0 360 0; loop:true; easing:linear;" data-label="right middle"></a-entity>
         </a-entity>
-        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 -0.5 -1" material="shader:gif;src:url(nyancat.gif);color:green" data-label="right bottom"></a-entity>
-
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 0.125 -1" material="shader:gif;src:url(nyancat.gif);color:green" data-label="right bottom"></a-entity>
         </a-entity>
-      
       <!-- sky -->
       <a-sky color="pink"></a-sky>
-
     </a-scene>
-
     <div id="buttons" class="buttons"></div>
-    
     <div class="spacer"></div>
     <div class="spacer2"></div>
   </body>
 </html>
-
