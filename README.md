@@ -8,11 +8,12 @@
 
 ![example](example.gif)
 
+**Now transparent gif are supported!** 🎉🎊
 
 ## Properties
 
 - Basic material's properties are supported.
-- The property is pretty much same as `flat` shader besides `repeat`.
+- The property is pretty much same as `flat` shader.
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
@@ -24,7 +25,6 @@ For refference, please check the following links:
 - [Material](https://aframe.io/docs/master/components/material.html)
 - [Textures](https://aframe.io/docs/master/components/material.html#textures)
 - [Flat Shading Model](https://aframe.io/docs/core/shaders.html#Flat-Shading-Model)
-
 
 ## Usage
 
@@ -60,3 +60,12 @@ Then register and use.
 import 'aframe'
 import 'aframe-gif-shader'
 ```
+
+### Contributors
+
+Thank you so much 🙏
+
+- [@UXVirtual](https://github.com/UXVirtual)
+- [@urish](https://github.com/urish)
+- [@pablodiegoss](https://github.com/pablodiegoss)
+- [@margauxdivernois](https://github.com/margauxdivernois)
