@@ -69,3 +69,4 @@ Thank you so much 🙏
 - [@urish](https://github.com/urish)
 - [@pablodiegoss](https://github.com/pablodiegoss)
 - [@margauxdivernois](https://github.com/margauxdivernois)
+- [@Danpollak](https://github.com/Danpollak)
