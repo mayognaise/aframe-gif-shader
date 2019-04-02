@@ -57,7 +57,7 @@ AFRAME.registerShader('gif', {
     if (data.repeat) {
       this.__texture.wrapS = THREE.RepeatWrapping;
       this.__texture.wrapT = THREE.RepeatWrapping;
-      this.__texture.repeat.set( data.repeat.x, data.repeat.y );	
+      this.__texture.repeat.set( data.repeat.x, data.repeat.y );
     }
     this.__material = {}
     this.__reset()
@@ -161,7 +161,7 @@ AFRAME.registerShader('gif', {
     else if (typeof autoplay === 'undefined') {
       this.__autoplay = true
     }
-    if (this.__autoplay && this.__frames) { this.play() } 
+    if (this.__autoplay && this.__frames) { this.play() }
 
     /* src */
     if (src) {
