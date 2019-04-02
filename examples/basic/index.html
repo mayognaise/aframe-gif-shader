@@ -14,21 +14,24 @@
       <a-assets>
         <img id="nyancat" src="nyancat.gif">
         <img id="pusheen" src="pusheen.gif">
+        <img id="banana" src="banana.gif">
       </a-assets>
 
       <a-entity position="0 0 -5">
 
         <!-- pusheen -->
-        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4.625 -1" material="shader:gif;src:url(pusheen.gif);" animation="property: rotation; dur: 10000; fill: forwards; to: 0 360 0; loop: true; easing: linear;" data-label="left top"></a-entity>
-        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 2.375 -1" material="shader:gif;src:url(pusheen.gif);color:orange;" data-label="left middle"></a-entity>
-        <a-entity geometry="primitive:circle;segments:64" position="-1.2 0.125 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue" data-label="left bottom"></a-entity>
-        <a-entity geometry="primitive:circle;segments:6" position="-1.2 -2.125 -1" material="shader:gif;src:#pusheen;repeat: 2 2;" data-label="left bottom"></a-entity>
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="-1.2 4.625 -1" material="shader:gif;src:url(pusheen.gif);" animation="property: rotation; dur: 10000;to: 0 360 0; loop: true; easing: linear;"></a-entity>
+        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 2.375 -1" material="shader:gif;src:url(pusheen.gif);color:orange;"></a-entity>
+        <a-entity geometry="primitive:circle;segments:64" position="-1.2 0.125 -1" material="shader:gif;src:#pusheen;opacity:.2;color:blue"></a-entity>
+        <!-- banana -->
+        <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 -2.125 -1" material="shader:gif;src:#banana;repeat: 2 2;alphaTest:0.5;"></a-entity>
+        <a-entity geometry="primitive:plane;width:2;height:2;" position="1.2 -2.125 -1" material="shader:gif;src:#banana;alphaTest:0.5;"></a-entity>
         <!-- nyancat -->
-        <a-entity geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4.625 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;" data-label="right top"></a-entity>
+        <a-entity geometry="primitive:circle;segments:5;radius:1.2;" position="1.2 4.625 -1" material="shader:gif;src:url(nyancat.gif);opacity:.5;"></a-entity>
         <a-entity rotation="0 0 0" position="1.2 2.25 -1">
-          <a-entity geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" animation="property:rotation; dur:5000; fill:forwards; to:0 360 0; loop:true; easing:linear;" data-label="right middle"></a-entity>
+          <a-entity geometry="primitive:cylinder; height:1.5;radius:1;" material="shader:gif;src:#nyancat;" animation="property:rotation; dur:5000;to:0 360 0; loop:true; easing:linear;"></a-entity>
         </a-entity>
-        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 0.125 -1" material="shader:gif;src:url(nyancat.gif);color:green" data-label="right bottom"></a-entity>
+        <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;" position="1.2 0.125 -1" material="shader:gif;src:url(nyancat.gif);color:green"></a-entity>
         </a-entity>
       <!-- sky -->
       <a-sky color="pink"></a-sky>
