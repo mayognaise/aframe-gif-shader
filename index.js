@@ -429,8 +429,10 @@ AFRAME.registerShader('gif', {
       this.__clearCanvas();
     }
     const actualFrame = this.__frames[this.__frameIdx]
-    this.__ctx.drawImage(actualFrame, 0, 0, this.__width, this.__height)
-    this.__texture.needsUpdate = true
+    if(typeof actualFrame !== 'undefined') {
+      this.__ctx.drawImage(actualFrame, 0, 0, this.__width, this.__height)
+      this.__texture.needsUpdate = true
+    }
   },
 
   /*============================
