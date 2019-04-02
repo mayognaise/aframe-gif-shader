@@ -599,7 +599,7 @@
 	  var frames = [];
 	  var loopCnt = 0;
 	  if (gif[0] === 0x47 && gif[1] === 0x49 && gif[2] === 0x46 && // 'GIF'
-	  gif[3] === 0x38 && gif[4] === 0x39 && gif[5] === 0x61) {
+	  gif[3] === 0x38 && (gif[4] === 0x39 || gif[4] === 0x37) && gif[5] === 0x61) {
 	    // '89a'
 	    pos += 13 + +!!(gif[10] & 0x80) * Math.pow(2, (gif[10] & 0x07) + 1) * 3;
 	    var gifHeader = gif.subarray(0, pos);
